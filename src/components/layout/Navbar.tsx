@@ -213,6 +213,7 @@ export default function Navbar() {
               <DropdownMenuItem onClick={() => setLanguage('cn')} className="rounded-xl font-black text-[10px] uppercase tracking-widest py-3.5 px-6 cursor-pointer hover:bg-primary/10 transition-all">中文</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+<div id="google-auth-container" className="google-auth-container"></div>
 
           <Button 
             variant="ghost" 

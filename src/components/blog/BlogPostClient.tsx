@@ -82,16 +82,14 @@ const buildChecksum = (seed: string) => {
   return `${a.toString(16)}${b.toString(16)}`.toUpperCase().slice(0, 12).padEnd(12, '0');
 };
 
-const SAVED_POSTS_KEY = 'archlab:saved-posts';
+const SAVED_POSTS_KEY = 'archlab:favorites';
+const HISTORY_KEY = 'archlab:history';
 
-const readSavedPostSlugs = () => {
+const readSavedPosts = () => {
   if (typeof window === 'undefined') return [];
   try {
     const raw = window.localStorage.getItem(SAVED_POSTS_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.filter((item): item is string => typeof item === 'string');
+    return raw ? JSON.parse(raw) : [];
   } catch {
     return [];
   }
@@ -397,9 +395,29 @@ export default function BlogPostClient({ post, relatedPosts }: { post: BlogPost,
   const manualSelecting = React.useRef(false);
   const [isSaved, setIsSaved] = useState(false);
 
+  // 自动记录历史记录
   useEffect(() => {
-    const savedSlugs = readSavedPostSlugs();
-    setIsSaved(savedSlugs.includes(post.slug));
+    if (typeof window === 'undefined') return;
+    const history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+    const currentHref = `/blog/${post.slug}`;
+    const isAlreadyInHistory = history.some((item: any) => item.href === currentHref);
+    
+    if (!isAlreadyInHistory) {
+      const newHistoryItem = {
+        id: Date.now(),
+        title: post.title,
+        date: new Date().toLocaleDateString(),
+        category: post.category,
+        href: currentHref
+      };
+      const updatedHistory = [newHistoryItem, ...history].slice(0, 50);
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(updatedHistory));
+    }
+  }, [post.slug, post.title, post.category]);
+
+  useEffect(() => {
+    const savedPosts = readSavedPosts();
+    setIsSaved(savedPosts.some((p: any) => p.href === `/blog/${post.slug}`));
   }, [post.slug]);
 
   const handleShare = async () => {
@@ -442,17 +460,32 @@ export default function BlogPostClient({ post, relatedPosts }: { post: BlogPost,
     }
   };
   const handleSave = () => {
-    const savedSlugs = readSavedPostSlugs();
-    const alreadySaved = savedSlugs.includes(post.slug);
-    const nextSavedSlugs = alreadySaved ? savedSlugs.filter((slug) => slug !== post.slug) : [...savedSlugs, post.slug];
+    const savedPosts = readSavedPosts();
+    const currentHref = `/blog/${post.slug}`;
+    const alreadySaved = savedPosts.some((p: any) => p.href === currentHref);
+    
+    let nextSavedPosts;
+    if (alreadySaved) {
+      nextSavedPosts = savedPosts.filter((p: any) => p.href !== currentHref);
+    } else {
+      const newFavorite = {
+        id: Date.now(),
+        title: post.title,
+        date: new Date().toLocaleDateString(),
+        category: post.category,
+        href: currentHref
+      };
+      nextSavedPosts = [newFavorite, ...savedPosts];
+    }
+
     try {
-      window.localStorage.setItem(SAVED_POSTS_KEY, JSON.stringify(nextSavedSlugs));
+      window.localStorage.setItem(SAVED_POSTS_KEY, JSON.stringify(nextSavedPosts));
       setIsSaved(!alreadySaved);
       toast({
         title: language === 'cn' ? (!alreadySaved ? '已保存' : '已取消保存') : (!alreadySaved ? 'Saved' : 'Removed'),
         description: language === 'cn'
-          ? (!alreadySaved ? '文章已加入本地收藏列表' : '文章已从本地收藏列表移除')
-          : (!alreadySaved ? 'Added to local saved list.' : 'Removed from local saved list.')
+          ? (!alreadySaved ? '文章已加入个人中心' : '文章已从个人中心移除')
+          : (!alreadySaved ? 'Added to profile.' : 'Removed from profile.')
       });
     } catch {
       toast({
