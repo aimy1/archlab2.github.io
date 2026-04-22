@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "avatar",
+      "description": "A professional placeholder avatar",
+      "imageUrl": "https://picsum.photos/seed/admin-avatar/400/400",
+      "imageHint": "professional avatar"
+    },
+    {
+      "id": "hero-bg",
+      "description": "Futuristic abstract architecture background",
+      "imageUrl": "https://picsum.photos/seed/pixel-nest-hero/1200/600",
+      "imageHint": "futuristic architecture"
+    },
+    {
+      "id": "blog-1",
+      "description": "Web architecture illustration",
+      "imageUrl": "https://picsum.photos/seed/web-arch/800/600",
+      "imageHint": "network nodes"
+    },
+    {
+      "id": "blog-2",
+      "description": "Minimalist design mockup",
+      "imageUrl": "https://picsum.photos/seed/ui-design/800/600",
+      "imageHint": "minimalist workspace"
+    },
+    {
+      "id": "blog-3",
+      "description": "AI neural network visualization",
+      "imageUrl": "https://picsum.photos/seed/ai-workflow/800/600",
+      "imageHint": "artificial intelligence"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+2026-03-20T13:28:50.792986Z	Cloning repository...
+2026-03-20T13:28:52.282271Z	From https://github.com/aimy1/archlab2.github.io
+2026-03-20T13:28:52.282685Z	 * branch            ced8fc46fb2c42fb5c0c184ff930771e33902e02 -> FETCH_HEAD
+2026-03-20T13:28:52.282792Z	
+2026-03-20T13:28:52.333915Z	HEAD is now at ced8fc4 Fix generate:md for Cloudflare shell
+2026-03-20T13:28:52.334284Z	
+2026-03-20T13:28:52.380279Z	
+2026-03-20T13:28:52.380793Z	Using v2 root directory strategy
+2026-03-20T13:28:52.395426Z	Success: Finished cloning repository files
+2026-03-20T13:28:54.459327Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-03-20T13:28:54.459924Z	
+2026-03-20T13:28:54.460378Z	Found wrangler.toml file. Reading build configuration...
+2026-03-20T13:28:54.465384Z	pages_build_output_dir: .open-next
+2026-03-20T13:28:54.465687Z	Build environment variables: (none found)
+2026-03-20T13:28:55.558966Z	Successfully read the Wrangler configuration file.
+2026-03-20T13:28:55.705201Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-20T13:28:55.705821Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-20T13:29:00.472307Z	npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+2026-03-20T13:29:02.044846Z	npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-03-20T13:29:02.260025Z	npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-03-20T13:29:05.436351Z	npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-03-20T13:29:05.437085Z	npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+2026-03-20T13:29:05.837597Z	npm warn deprecated @opentelemetry/exporter-jaeger@1.30.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2026-03-20T13:29:07.381404Z	npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-03-20T13:29:07.775794Z	npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-03-20T13:29:07.825294Z	npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-03-20T13:29:10.979399Z	npm warn deprecated glob@9.3.5: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-03-20T13:29:14.854601Z	npm warn deprecated eslint@8.57.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-03-20T13:29:34.5003Z	
+2026-03-20T13:29:34.500925Z	added 1559 packages, and audited 1560 packages in 38s
+2026-03-20T13:29:34.501009Z	
+2026-03-20T13:29:34.501047Z	328 packages are looking for funding
+2026-03-20T13:29:34.501098Z	  run `npm fund` for details
+2026-03-20T13:29:34.566038Z	
+2026-03-20T13:29:34.566548Z	37 vulnerabilities (24 low, 7 moderate, 6 high)
+2026-03-20T13:29:34.566661Z	
+2026-03-20T13:29:34.566729Z	To address issues that do not require attention, run:
+2026-03-20T13:29:34.566769Z	  npm audit fix
+2026-03-20T13:29:34.566835Z	
+2026-03-20T13:29:34.566878Z	To address all issues (including breaking changes), run:
+2026-03-20T13:29:34.566918Z	  npm audit fix --force
+2026-03-20T13:29:34.566975Z	
+2026-03-20T13:29:34.567023Z	Run `npm audit` for details.
+2026-03-20T13:29:34.67538Z	Executing user command: npm ci && npm run build:pages:cf
+2026-03-20T13:29:52.595554Z	npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-03-20T13:29:53.073404Z	npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+2026-03-20T13:29:53.441174Z	npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+2026-03-20T13:29:53.634551Z	npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-03-20T13:29:53.961746Z	npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-03-20T13:29:53.9754Z	npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-03-20T13:29:53.979009Z	npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-03-20T13:29:57.110072Z	npm warn deprecated @opentelemetry/exporter-jaeger@1.30.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2026-03-20T13:29:59.213824Z	npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-03-20T13:30:02.324061Z	npm warn deprecated glob@9.3.5: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-03-20T13:30:15.470856Z	npm warn deprecated eslint@8.57.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-03-20T13:30:31.858925Z	
+2026-03-20T13:30:31.860169Z	added 1559 packages, and audited 1560 packages in 57s
+2026-03-20T13:30:31.860388Z	
+2026-03-20T13:30:31.860447Z	328 packages are looking for funding
+2026-03-20T13:30:31.860588Z	  run `npm fund` for details
+2026-03-20T13:30:31.926804Z	
+2026-03-20T13:30:31.927224Z	37 vulnerabilities (24 low, 7 moderate, 6 high)
+2026-03-20T13:30:31.927343Z	
+2026-03-20T13:30:31.927396Z	To address issues that do not require attention, run:
+2026-03-20T13:30:31.927499Z	  npm audit fix
+2026-03-20T13:30:31.927591Z	
+2026-03-20T13:30:31.927705Z	To address all issues (including breaking changes), run:
+2026-03-20T13:30:31.927763Z	  npm audit fix --force
+2026-03-20T13:30:31.927806Z	
+2026-03-20T13:30:31.927849Z	Run `npm audit` for details.
+2026-03-20T13:30:32.442347Z	
+2026-03-20T13:30:32.443018Z	> nextn@0.1.0 build:pages:cf
+2026-03-20T13:30:32.443259Z	> npm run generate:md && opennextjs-cloudflare build && npm run postbuild
+2026-03-20T13:30:32.443392Z	
+2026-03-20T13:30:32.611631Z	
+2026-03-20T13:30:32.611981Z	> nextn@0.1.0 generate:md
+2026-03-20T13:30:32.612409Z	> node -e "const fs=require('fs');const path=require('path');const mdDir=path.join(process.cwd(),'md');const outFile=path.join(process.cwd(),'src','content','md-posts.json');const parse=(content)=>{const frontmatterRegex=/^---([\s\S]*?)---/;const match=content.match(frontmatterRegex);const metadata={};if(match){const yaml=match[1].trim();yaml.split('\n').forEach(line=>{const firstColonIndex=line.indexOf(':');if(firstColonIndex!==-1){const key=line.slice(0,firstColonIndex).trim();let value=line.slice(firstColonIndex+1).trim();value=value.replace(/^[\"'](.*)[\"']$/,'$1').replace(/[\[\]]/g,'');metadata[key]=value;}});}const body=content.replace(frontmatterRegex,'').trim();return {metadata,body};};const getImageInfo=(metadata,slug)=>{const category=metadata.categories||'Technology';const tags=metadata.tags||'';const keywords=(category+' '+tags).trim()||'development';const hint=keywords.split(/[\s,]+/).slice(0,2).join(' ');const image=metadata.image||metadata.cover||('https://picsum.photos/seed/'+encodeURIComponent(slug)+'/1200/600');return {image,keywords:hint};};if(!fs.existsSync(mdDir)){fs.mkdirSync(path.dirname(outFile),{recursive:true});fs.writeFileSync(outFile,'[]');process.exit(0);}const filenames=fs.readdirSync(mdDir).filter(f=>f.endsWith('.md'));const posts=filenames.map(filename=>{const filePath=path.join(mdDir,filename);const fileContent=fs.readFileSync(filePath,'utf8');const {metadata,body}=parse(fileContent);const slug=filename.replace(/\.md$/,'');const words=body.split(/\s+/).length;const readTime=''+Math.ceil(words/200);const {image,keywords}=getImageInfo(metadata,slug);return {id:slug,slug,title:metadata.title||slug,excerpt:metadata.description||body.substring(0,160).replace(/[#*`]/g,'')+'...',content:body,category:metadata.categories||'General',tags:(metadata.tags||'').split(/[\s,]+/).filter(Boolean),date:metadata.date?metadata.date.split(' ')[0]:'2025-01-01',readTime,image,keywords,featured:metadata.featured==='true',author:{name:'PixelNest Admin',role:'Core Architect',avatar:'https://picsum.photos/seed/'+encodeURIComponent(slug)+'-author/400/400'}};});posts.sort((a,b)=>new Date(b.date).getTime()-new Date(a.date).getTime());fs.mkdirSync(path.dirname(outFile),{recursive:true});fs.writeFileSync(outFile,JSON.stringify(posts,null,2));"
+2026-03-20T13:30:32.612598Z	
+2026-03-20T13:30:32.616282Z	sh: 1: Syntax error: EOF in backquote substitution
+2026-03-20T13:30:32.641577Z	Failed: Error while executing user command. Exited with error code: 2
+2026-03-20T13:30:32.652301Z	Failed: build command exited with code: 1
+2026-03-20T13:30:33.662034Z	Failed: error occurred while running build command
