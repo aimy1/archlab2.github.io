@@ -1,0 +1,83 @@
+/* public/css/auth.css */
+.google-auth-container {
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* 适配 Navbar 的胶囊样式 */
+.google-user-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.google-user-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.google-user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--primary), 0.6);
+  box-shadow: 0 0 15px rgba(var(--primary), 0.3);
+}
+
+.google-user-name {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.google-user-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.google-signout-btn {
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.google-signout-btn:hover {
+  opacity: 1;
+  background: rgba(255, 77, 77, 0.1);
+}
+
+/* 隐藏 Google 原生按钮的某些边框以更好地融合 */
+iframe[id^="gsi_"] {
+  filter: grayscale(1) invert(1) brightness(0.8) contrast(1.2);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+iframe[id^="gsi_"]:hover {
+  opacity: 1;
+}
